@@ -5,6 +5,7 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/solid";
+import MobileNav from "./MobileNav";
 
 export const Header = () => {
   const [display, setDisplay] = useState(false);
@@ -63,27 +64,7 @@ export const Header = () => {
           <Bars3BottomRightIcon className="h-6 w-6" />
         </button>
       </div>
-      {display && (
-        <nav className="absolute block md:hidden w-full h-screen z-10 bg-white text-gray-400 px-4 capitalize">
-          <ul>
-            <li>
-              <a className="block py-2 hover:text-blue-600" href="">
-                about
-              </a>
-            </li>
-            <li>
-              <a className="block py-2 hover:text-blue-600" href="">
-                docs
-              </a>
-            </li>
-            <li>
-              <a className="block py-2 hover:text-blue-600" href="">
-                templates
-              </a>
-            </li>
-          </ul>
-        </nav>
-      )}
+      {display && <MobileNav />}
     </header>
   );
 };
