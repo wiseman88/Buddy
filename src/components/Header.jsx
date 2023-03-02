@@ -1,5 +1,5 @@
 import useColorMode from "@/hooks/useColorMode";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Bars3BottomRightIcon,
   MoonIcon,
@@ -9,10 +9,17 @@ import {
 export const Header = () => {
   const [display, setDisplay] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
+  const [mounted, setMounted] = useState(false);
 
   const toggleColor = () => {
     setColorMode(colorMode === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <header
