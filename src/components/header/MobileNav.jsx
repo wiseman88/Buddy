@@ -23,14 +23,13 @@ const MobileNav = () => {
           </a>
         </li>
         <li className="flex items-center pt-2 border-t">
-          <span>Switch Theme</span>
-          <span className="px-2">|</span>
+          <span className="mr-4">Switch Theme</span>
           <div className="relative flex items-center gap-3 border rounded p-2">
             <SunIcon className="w-6 h-6 dark:hidden" />
             <MoonIcon className="w-6 h-6 hidden dark:block" />
             {colorMode === "light" ? <span>Light</span> : <span>Dark</span>}
             <select
-              className="w-full absolute inset-0 appearance-none opacity-0 text-lg rounded"
+              className="w-full absolute inset-0 appearance-none opacity-0 text-lg dark:text-gray-900 rounded"
               value={colorMode}
               onChange={(e) => setColorMode(e.target.value)}
             >
