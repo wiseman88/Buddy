@@ -2,10 +2,20 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Header } from "@/src/components/header/Header";
+import { useEffect, useState } from "react";
+import Sidebar from "@/src/components/main/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [height, setHeight] = useState();
+
+  useEffect(() => {
+    const headerHeight = document.querySelector("header").offsetHeight;
+
+    setHeight(headerHeight);
+  });
+
   return (
     <>
       <Head>
@@ -15,7 +25,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main></main>
+      <main
+        className={`relative flex lg:w-9/12 mx-auto px-4`}
+        style={{ paddingTop: height }}
+      >
+        <Sidebar />
+      </main>
     </>
   );
 }
