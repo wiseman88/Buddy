@@ -1,13 +1,13 @@
-import useColorMode from "@/hooks/useColorMode";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 const DesktopNav = () => {
-  const [colorMode, setColorMode] = useColorMode();
   const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const toggleColor = () => {
-    setColorMode(colorMode === "light" ? "dark" : "light");
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const DesktopNav = () => {
         </li>
         <li className="flex items-center">
           <button onClick={toggleColor}>
-            {colorMode === "light" ? (
+            {theme === "light" ? (
               <MoonIcon className="h-6 w-6" />
             ) : (
               <SunIcon className="h-6 w-6" />

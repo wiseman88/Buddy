@@ -1,8 +1,8 @@
-import useColorMode from "@/hooks/useColorMode";
 import { ChevronDownIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { useTheme } from "next-themes";
 
 const MobileNav = () => {
-  const [colorMode, setColorMode] = useColorMode();
+  const { theme, setTheme } = useTheme();
 
   return (
     <nav className="absolute block md:hidden w-full h-screen z-10 bg-white dark:bg-slate-700 text-gray-500 dark:text-gray-300 px-4 capitalize">
@@ -27,11 +27,11 @@ const MobileNav = () => {
           <div className="relative flex items-center gap-3 border rounded p-2">
             <SunIcon className="w-6 h-6 dark:hidden" />
             <MoonIcon className="w-6 h-6 hidden dark:block" />
-            {colorMode === "light" ? <span>Light</span> : <span>Dark</span>}
+            {theme === "light" ? <span>Light</span> : <span>Dark</span>}
             <select
               className="w-full absolute inset-0 appearance-none opacity-0 text-lg dark:text-gray-900 rounded"
-              value={colorMode}
-              onChange={(e) => setColorMode(e.target.value)}
+              value={theme}
+              onChange={(e) => setTheme(e.target.value)}
             >
               <option value="light">Light</option>
               <option value="dark">Dark</option>
