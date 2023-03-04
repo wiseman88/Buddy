@@ -8,7 +8,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed w-full bg-white dark:bg-slate-900 dark:text-slate-100 ${
+      className={`fixed z-20 w-full bg-white dark:bg-slate-900 dark:text-slate-100 ${
         !display ? "border-b border-gray-200" : ""
       }`}
     >
