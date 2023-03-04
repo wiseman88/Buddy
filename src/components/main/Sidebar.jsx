@@ -26,12 +26,12 @@ const Sidebar = () => {
         <ul className="pt-4">
           <li>
             <h5 className="font-bold mb-2 dark:text-white">Components</h5>
-            <ul className="text-slate-400 dark:text-slate-200">
+            <ul>
               {navigation.map((item, key) => (
                 <li key={key}>
                   <a
                     href=""
-                    className="block pl-3 hover:text-slate-700 border-l hover:border-blue-500 dark:text-slate-200 dark:hover:text-white py-2 uppercase text-xs"
+                    className="block pl-3 border-l text-slate-400 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 hover:border-blue-500 py-2 uppercase text-xs"
                   >
                     {item}
                   </a>
