@@ -1,6 +1,6 @@
-import { navLinks } from "@/src/constants";
 import { ChevronDownIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
+import NavLink from "./NavLink";
 
 const MobileNav = () => {
   const { theme, setTheme } = useTheme();
@@ -8,13 +8,7 @@ const MobileNav = () => {
   return (
     <nav className="absolute block md:hidden w-full h-screen z-10 bg-white dark:bg-slate-700 text-gray-500 dark:text-gray-300 px-4 capitalize">
       <ul>
-        {navLinks.map((link, key) => (
-          <li key={key}>
-            <a className="block py-2 hover:text-blue-600" href="">
-              {link.title}
-            </a>
-          </li>
-        ))}
+        <NavLink style={"block py-2 hover:text-blue-600"} />
         <li className="flex items-center pt-2 border-t">
           <span className="mr-4">Switch Theme</span>
           <div className="relative flex items-center gap-3 border rounded p-2">
