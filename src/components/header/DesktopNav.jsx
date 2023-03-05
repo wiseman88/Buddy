@@ -1,6 +1,7 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { navLinks } from "@/src/constants";
 
 const DesktopNav = () => {
   const [mounted, setMounted] = useState(false);
@@ -19,21 +20,13 @@ const DesktopNav = () => {
   return (
     <nav className="flex-none">
       <ul className="hidden sm:flex items-center gap-8 uppercase text-sm">
-        <li>
-          <a className="hover:text-blue-600" href="">
-            about
-          </a>
-        </li>
-        <li>
-          <a className="hover:text-blue-600" href="">
-            docs
-          </a>
-        </li>
-        <li>
-          <a className="hover:text-blue-600" href="">
-            templates
-          </a>
-        </li>
+        {navLinks.map((link, key) => (
+          <li key={key}>
+            <a className="hover:text-blue-600" href="">
+              {link.title}
+            </a>
+          </li>
+        ))}
         <li className="flex items-center">
           <button onClick={toggleColor}>
             {theme === "light" ? (

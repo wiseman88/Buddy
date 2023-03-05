@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react";
+import { sidebarLinks } from "@/src/constants";
 
 const Sidebar = () => {
   const [height, setHeight] = useState();
-  const navigation = [
-    "breadcrumb",
-    "buttons",
-    "dropdown",
-    "message",
-    "navbar",
-    "pagination",
-    "tabs",
-  ];
 
   useEffect(() => {
     const headerHeight = document.querySelector("header").offsetHeight;
@@ -27,13 +19,13 @@ const Sidebar = () => {
           <li>
             <h5 className="font-bold mb-2 dark:text-white">Components</h5>
             <ul>
-              {navigation.map((item, key) => (
+              {sidebarLinks.map((link, key) => (
                 <li key={key}>
                   <a
                     href=""
                     className="block pl-3 border-l text-slate-400 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 hover:border-blue-500 py-2 uppercase text-xs"
                   >
-                    {item}
+                    {link.title}
                   </a>
                 </li>
               ))}

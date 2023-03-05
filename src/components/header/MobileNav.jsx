@@ -1,3 +1,4 @@
+import { navLinks } from "@/src/constants";
 import { ChevronDownIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
 
@@ -7,21 +8,13 @@ const MobileNav = () => {
   return (
     <nav className="absolute block md:hidden w-full h-screen z-10 bg-white dark:bg-slate-700 text-gray-500 dark:text-gray-300 px-4 capitalize">
       <ul>
-        <li>
-          <a className="block py-2 hover:text-blue-600" href="">
-            about
-          </a>
-        </li>
-        <li>
-          <a className="block py-2 hover:text-blue-600" href="">
-            docs
-          </a>
-        </li>
-        <li>
-          <a className="block py-2 hover:text-blue-600" href="">
-            templates
-          </a>
-        </li>
+        {navLinks.map((link, key) => (
+          <li key={key}>
+            <a className="block py-2 hover:text-blue-600" href="">
+              {link.title}
+            </a>
+          </li>
+        ))}
         <li className="flex items-center pt-2 border-t">
           <span className="mr-4">Switch Theme</span>
           <div className="relative flex items-center gap-3 border rounded p-2">
