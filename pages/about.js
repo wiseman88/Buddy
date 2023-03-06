@@ -1,18 +1,22 @@
 const about = () => {
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quam
-      dicta enim. Nemo error soluta ratione blanditiis repellendus! Quidem magni
-      deserunt repudiandae fugit, officia quos veritatis, numquam maxime non
-      praesentium est maiores? Ipsa maiores ad minus iusto, sapiente
-      consequuntur neque blanditiis aspernatur ab iste alias labore non
-      similique quo ducimus quae eum deleniti? Asperiores et adipisci quibusdam
-      suscipit quasi libero ducimus aspernatur, commodi ab reprehenderit odit
-      iusto recusandae quos possimus sunt? Fugiat officiis temporibus
-      perspiciatis sed necessitatibus voluptatem nulla aliquid id, delectus
-      ullam perferendis? Sunt explicabo vero, deleniti aut, mollitia
-      consequuntur itaque assumenda qui soluta deserunt cum tenetur a sequi.
-    </div>
+    <section className="py-6">
+      <h1 className="text-3xl mb-3 font-bold">About</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+        quis ea! Et amet aliquam illo commodi. Temporibus, mollitia et veritatis
+        blanditiis sunt perspiciatis voluptatum illo repellat natus laboriosam
+        alias atque, dolorum neque quod consectetur consequuntur eaque debitis,
+        architecto quia nemo. Tenetur vero commodi beatae laudantium facere
+        maxime accusantium magnam dolorum dicta, repudiandae accusamus ad vel
+        numquam veritatis sapiente quisquam itaque cumque et? Ratione
+        accusantium, consequatur autem officiis nisi quos ipsam. Atque ut soluta
+        blanditiis, voluptates quo perspiciatis ad officiis sit voluptate,
+        incidunt deleniti, beatae recusandae a sunt dolores vel itaque.
+        Cupiditate provident quam repellat quibusdam iste optio distinctio
+        laboriosam tempora.
+      </p>
+    </section>
   );
 };
 

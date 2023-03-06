@@ -21,11 +21,11 @@ const Layout = ({ children }) => {
       </Head>
       <Header />
       <main
-        className={`relative flex lg:w-9/12 mx-auto px-4`}
+        className={`relative lg:w-9/12 mx-auto px-4`}
         style={{ paddingTop: height }}
       >
         <Sidebar />
-        <>{children}</>
+        <div className="pl-[19rem]">{children}</div>
       </main>
     </>
   );

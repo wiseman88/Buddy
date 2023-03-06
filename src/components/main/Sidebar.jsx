@@ -11,7 +11,7 @@ const Sidebar = () => {
   });
   return (
     <aside
-      className="fixed pl-4 inset-0 z-0 left overflow-y-auto w-[18rem] left-[max(0px,calc(50%-45rem))]"
+      className="fixed bottom-0 w-[18rem] overflow-y-auto"
       style={{ top: height }}
     >
       <nav>
