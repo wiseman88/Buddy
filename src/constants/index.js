@@ -8,8 +8,8 @@ const navLinks = [
     title: "docs",
   },
   {
-    id: "template",
-    title: "template",
+    id: "templates",
+    title: "templates",
   },
 ];
 

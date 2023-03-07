@@ -1,13 +1,14 @@
 import { navLinks } from "@/src/constants";
+import Link from "next/link";
 
 const NavLink = (prop) => {
   return (
     <>
       {navLinks.map((link, key) => (
         <li key={key}>
-          <a className={prop.style} href="">
+          <Link className={prop.style} href={`${link.id}`}>
             {link.title}
-          </a>
+          </Link>
         </li>
       ))}
     </>
