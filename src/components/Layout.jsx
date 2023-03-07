@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Header } from "./header/Header";
-import Sidebar from "./main/Sidebar";
+import Sidebar from "./main/sidebar/Sidebar";
 import { useEffect, useState } from "react";
 
 const Layout = ({ children }) => {
