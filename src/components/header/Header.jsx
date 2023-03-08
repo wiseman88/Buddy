@@ -14,11 +14,11 @@ export const Header = () => {
       }`}
     >
       <div className="flex items-center justify-between lg:w-9/12 mx-auto px-4 py-4">
-        <Link className="text-xl sm:text-lg" href="/">
+        <Link className="text-xl md:text-lg" href="/">
           CSS-Buddy
         </Link>
         <DesktopNav />
-        <button className="sm:hidden" onClick={() => setDisplay(!display)}>
+        <button className="md:hidden" onClick={() => setDisplay(!display)}>
           <Bars3BottomRightIcon className="h-6 w-6" />
         </button>
       </div>

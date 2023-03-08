@@ -12,7 +12,7 @@ const Sidebar = () => {
   });
   return (
     <aside
-      className="fixed bottom-0 w-[18rem] overflow-y-auto"
+      className="hidden md:block fixed bottom-0 w-[12rem] overflow-y-auto"
       style={{ top: height }}
     >
       <nav>

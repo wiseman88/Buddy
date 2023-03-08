@@ -19,7 +19,7 @@ const DesktopNav = () => {
 
   return (
     <nav className="flex-none">
-      <ul className="hidden sm:flex items-center gap-8 uppercase text-sm">
+      <ul className="hidden md:flex items-center gap-8 uppercase text-sm">
         <NavLink style={"hover:text-blue-600"} />
         <li className="flex items-center">
           <button onClick={toggleColor}>

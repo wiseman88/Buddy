@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         style={{ paddingTop: height }}
       >
         <Sidebar />
-        <div className="pl-[19rem]">{children}</div>
+        <div className="md:pl-[13rem]">{children}</div>
       </main>
     </>
   );
