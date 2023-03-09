@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
+import {
+  Bars3BottomRightIcon,
+  EllipsisVerticalIcon,
+} from "@heroicons/react/24/solid";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleVisibility } from "@/store/sidebarSlice";
 
 export const Header = () => {
   const [display, setDisplay] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <header
@@ -20,6 +26,14 @@ export const Header = () => {
         <DesktopNav />
         <button className="md:hidden" onClick={() => setDisplay(!display)}>
           <Bars3BottomRightIcon className="h-6 w-6" />
+        </button>
+      </div>
+      <div className="px-4 py-2">
+        <button
+          className="md:hidden"
+          onClick={() => dispatch(toggleVisibility())}
+        >
+          <EllipsisVerticalIcon className="h-6 w-6" />
         </button>
       </div>
       {display && <MobileNav />}
