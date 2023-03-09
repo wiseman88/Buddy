@@ -1,6 +1,11 @@
-export default function Home() {
+import Head from "next/head";
+
+export default function Home(props) {
   return (
     <>
+      <Head>
+        <title>Home</title>
+      </Head>
       <section className="py-6">
         <h1 className="text-3xl mb-3 font-bold">Home</h1>
         <p>
